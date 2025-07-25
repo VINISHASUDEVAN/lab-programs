@@ -1,30 +1,23 @@
-console.log()
-console.log()
-function subtract()
+let rand = Math.floor(Math.random()*100+1);
+console.log(rand);
+let attempt = 0;
+function guessGame()
 {
-   var num1 =(document.getElementById("number1").value)
-   var num2 = (document.getElementById("number2").value)
-   console.log(num1-num2)
-}
-function add()
-{
-    var num1 = parseFloat(document.getElementById("number1").value)
-    var num2 = parseFloat(document.getElementById("number2").value)
-    console.log(num1+num2)
-}
-function multiply()
-{
-    var num1 = (document.getElementById("number1").value)
-    var num2 = (document.getElementById("number2").value)
-    console.log(num1*num2)
-}
-function divide() 
-{
-    var num1 = parseFloat(document.getElementById("number1").value);
-    var num2 = parseFloat(document.getElementById("number2").value);
-    console.log(num1/num2)
-}
-
-    
+    let input = document.getElementById("num").value;
+    if(rand == input)
+    {
+      document.writeln("you won the game!\n your attempt:"+attempt);
+    }
+    else if(rand > input)
+    {
+        document.getElementById("res").innerText = "TOO LOW!";
+        attempt++;  
+    }
+    else if(rand < input)
+    {
+        document.getElementById("res").innerText = "TOO HIGH!";
+        attempt++;  
+    }
 
 
+}

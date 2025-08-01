@@ -25,3 +25,13 @@ arr.forEach((x)=>{console.log(x)})
  //splice
  arr.splice(2,4)
  console.log(arr)
+//split 
+func rev(word)
+{
+    [...word].reverse().join(" ")
+}
+    
+let topic= "java script is fun"
+let vinisha = topic.split(' ' )
+for(let i = 0;i<vinisha.length;i++)
+    console.log(vinisha[i])
